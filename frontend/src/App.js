@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { BreakfastList } from './components/BreakfastList/BreakfastList';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <h1>Buber <span>Breakfast</span></h1>
+        <hr />
+      </div>
+      <main>
+        <div className='breakfast-header-container'>
+          <h3>Your <span>Breakfasts</span></h3>
+          <span>Breakfasts you have created</span>
+        </div>
+        <div className="breakfast-list">
+          <BreakfastList />
+        </div>
+        <div className='footer'>
+          <input type="button" value="Create New Breakfast"/>
+        </div>
+      </main>
     </div>
   );
 }
