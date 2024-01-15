@@ -1,0 +1,5 @@
+@id=cea860cc-211d-4a3b-8cc7-02784467ea26
+
+GET http://localhost:5090/Breakfast/{{id}} HTTP/1.1
+content-type: application/json
+
