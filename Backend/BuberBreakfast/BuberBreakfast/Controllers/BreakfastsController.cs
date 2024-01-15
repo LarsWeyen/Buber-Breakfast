@@ -47,6 +47,24 @@ public class BreakfastController : ApiController
        
     }
 
+    [HttpGet]
+    public IActionResult GetAllBreakfast()
+    {
+        ErrorOr<List<Breakfast>> getBreakfastResult = _breakfastService.GetAllBreakfast();
+        List<BreakfastResponse> result = new List<BreakfastResponse>();
+        foreach (var breakfast in getBreakfastResult.Value)
+        {
+            result.Add(MapBreakfastResponse(breakfast));
+        }
+
+        return getBreakfastResult.Match(
+            breakfast => Ok(result),
+            errors => Problem(errors)
+        );
+
+
+    }
+
     [HttpPut("{id:guid}")]
     public IActionResult UpsertBreakfast(Guid id, UpsertBreakfastRequest request)
     {

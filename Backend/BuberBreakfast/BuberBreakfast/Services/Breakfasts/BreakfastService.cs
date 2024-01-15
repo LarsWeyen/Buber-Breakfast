@@ -21,6 +21,11 @@ public class BreakfastService : IBreakfastService
         return Result.Deleted;
     }
 
+    public ErrorOr<List<Breakfast>> GetAllBreakfast()
+    {
+        return _breakfasts.Values.ToList();
+    }
+
     public ErrorOr<Breakfast> GetBreakfast(Guid id)
     {
         if (_breakfasts.TryGetValue(id, out var breakfast))

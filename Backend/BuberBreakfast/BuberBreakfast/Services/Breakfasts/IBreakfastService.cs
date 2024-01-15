@@ -10,4 +10,5 @@ public interface IBreakfastService
     ErrorOr<Deleted> DeleteBreakfast(Guid id);
     ErrorOr<Breakfast> GetBreakfast(Guid id);
     ErrorOr<UpsertedBreakfast> UpsertBreakfast(Breakfast breakfast);
+    ErrorOr<List<Breakfast>> GetAllBreakfast();
 }
