@@ -1,0 +1,57 @@
+.breakfast-container{
+    display: flex;
+    gap: 0.8rem;
+    border: solid white 2px;
+
+}
+
+.breakfast-image-container{
+    max-width: 200px;
+    position: relative;
+    
+}
+
+.breakfast-image-container img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.breakfast-content-container{
+    margin-right: 6px;
+    
+}
+
+.breakfast-lower-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+    
+}
+
+.breakfast-lower-container p{
+    opacity: .7;
+}
+
+.breakfast-title{
+    margin-block: 10px;
+}
+
+.ingredients-container{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.savory-item{
+    background-color: #21374a;
+    padding: 6px 8px;
+    border-radius: 9px;
+}
+
+.sweet-item{
+    background-color: #582454;
+    padding: 6px 8px;
+    border-radius: 9px;
+}
