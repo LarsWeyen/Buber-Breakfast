@@ -11,7 +11,7 @@ function App() {
       <main>
         <div className='breakfast-header-container'>
           <h3>Your <span className='blue-highlighter'>Breakfasts</span></h3>
-          <span>Breakfasts you have created</span>
+          <span className='lower-opacity'>Breakfasts you have created</span>
         </div>
         <div className="breakfast-list">
           <BreakfastList />
