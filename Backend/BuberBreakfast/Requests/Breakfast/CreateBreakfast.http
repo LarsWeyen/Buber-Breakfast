@@ -4,7 +4,7 @@ content-type: application/json
 {
     "name": "Vegan Sunshine",
     "description": "Vegan everything! Join us in a healthy breakfast full of vegan dishes and desserts",
-    "startDateTime": "2022-04-08T08:00:00",
+    "startDate": "2022-04-08T08:00:00",
     "endDateTime": "2022-04-08T11:00:00",
     "savory": [
         "Oatmeal",
@@ -14,5 +14,6 @@ content-type: application/json
     ],
     "Sweet": [
         "Cookie"
-    ]
+    ],
+    "imageURL":"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.loveandlemons.com%2Fwp-content%2Fuploads%2F2021%2F01%2Fhealthy-vegan-breakfast.jpg&f=1&nofb=1&ipt=4d94bb256ac336ce4ccf0b9db92313165a34ec149cd0223ef305a24943dea606&ipo=images"
 }
