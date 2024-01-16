@@ -5,20 +5,20 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1>Buber <span>Breakfast</span></h1>
+        <h1>Buber <span className='blue-highlighter'>Breakfast</span></h1>
         <hr />
       </div>
       <main>
         <div className='breakfast-header-container'>
-          <h3>Your <span>Breakfasts</span></h3>
+          <h3>Your <span className='blue-highlighter'>Breakfasts</span></h3>
           <span>Breakfasts you have created</span>
         </div>
         <div className="breakfast-list">
           <BreakfastList />
         </div>
-        <div className='footer'>
-          <input type="button" value="Create New Breakfast"/>
-        </div>
+        <footer>
+          <input type="button" className='create-button' value="Create New Breakfast"/>
+        </footer>
       </main>
     </div>
   );
