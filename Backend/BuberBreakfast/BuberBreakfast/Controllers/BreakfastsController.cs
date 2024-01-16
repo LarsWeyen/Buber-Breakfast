@@ -113,7 +113,8 @@ public class BreakfastController : ApiController
                   breakfast.EndDateTime,
                   breakfast.LastModifiedDateTime,
                   breakfast.Savory,
-                  breakfast.Sweet
+                  breakfast.Sweet,
+                  breakfast.ImageURL
                 );
     }
 }

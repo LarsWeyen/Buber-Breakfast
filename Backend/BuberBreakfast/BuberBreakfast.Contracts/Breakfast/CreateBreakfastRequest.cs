@@ -6,5 +6,6 @@ public record CreateBreakfastRequest(
     DateTime StartDate,
     DateTime EndDateTime,
     List<string> Savory,
-    List<string> Sweet
+    List<string> Sweet,
+    string ImageURL
 );

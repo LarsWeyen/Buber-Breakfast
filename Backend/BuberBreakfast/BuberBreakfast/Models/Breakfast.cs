@@ -18,8 +18,9 @@ public class Breakfast
     public DateTime LastModifiedDateTime {get; }
     public List<string> Savory {get; }
     public List<string> Sweet {get; }
+    public string ImageURL { get; }
    
-    private Breakfast(Guid id, string name, string description, DateTime startDateTime, DateTime endDateTime, DateTime lastModifiedDateTime, List<string> savory,List<string> sweet)
+    private Breakfast(Guid id, string name, string description, DateTime startDateTime, DateTime endDateTime, DateTime lastModifiedDateTime, List<string> savory,List<string> sweet, string imageURL)
     {
         Id = id;
         Name = name;
@@ -29,6 +30,7 @@ public class Breakfast
         LastModifiedDateTime = lastModifiedDateTime;
         Savory = savory;
         Sweet = sweet;
+        ImageURL = imageURL;
     }
 
     public static ErrorOr<Breakfast> Create(     
@@ -38,6 +40,7 @@ public class Breakfast
         DateTime endDateTime,      
         List<string> savory,
         List<string> sweet,
+        string imageURL,
         Guid? id = null
     )
     {
@@ -65,7 +68,8 @@ public class Breakfast
             endDateTime,
             DateTime.UtcNow,
             savory,
-            sweet
+            sweet,
+            imageURL
         );
     }
     public static ErrorOr<Breakfast> From(CreateBreakfastRequest request)
@@ -76,7 +80,8 @@ public class Breakfast
             request.StartDate,
             request.EndDateTime,
             request.Savory,
-            request.Sweet
+            request.Sweet,
+            request.ImageURL
         );
     }
     public static ErrorOr<Breakfast> From(Guid id, UpsertBreakfastRequest request)
@@ -88,6 +93,7 @@ public class Breakfast
             request.EndDateTime,
             request.Savory,
             request.Sweet,
+            request.ImageURL,
             id
         );
     }
