@@ -8,7 +8,13 @@ export const BreakfastList = () => {
   const getBreakfasts = async () => {
     axios.get('http://localhost:5090/Breakfast')
     .then(res =>{
-      setBreakfasts(res.data)
+      if(res.data.length == 0){
+        setBreakfasts(null)
+      }
+      else{
+        setBreakfasts(res.data)
+      }
+      
     })
     .catch(err =>{
       console.log(err)
